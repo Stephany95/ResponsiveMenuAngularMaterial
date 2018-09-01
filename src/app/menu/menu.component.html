@@ -1,0 +1,42 @@
+<mat-card class="demo-panel"> 
+  <mat-card-title>
+    Menu Angular Material
+  </mat-card-title>
+
+  <mat-card-content>
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+    <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">
+      Open menu
+    </button>
+
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="subMenu">
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </button>
+        
+        <button mat-menu-item>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voicemail</span>
+        </button>
+        
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+  
+      </mat-menu> 
+
+      
+    <mat-menu #subMenu="matMenu">
+      <button mat-menu-item>General</button>
+      <button mat-menu-item>Display</button>
+      <button mat-menu-item>Profile</button>
+    </mat-menu>
+
+  </mat-card-content>
+</mat-card>

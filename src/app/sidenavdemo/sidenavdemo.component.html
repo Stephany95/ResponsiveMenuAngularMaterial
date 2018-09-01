@@ -1,0 +1,40 @@
+<mat-card class="demo-panel">
+  <mat-card-title>
+    Angular Material Sidenav
+  </mat-card-title>
+
+
+  <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Auto-resizing sidenav</p>
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+          Toggle extra text
+        </button>
+      </mat-drawer>
+    
+      <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+          Toggle sidenav
+        </button>
+      </div>
+    
+    </mat-drawer-container>
+    
+
+
+
+
+  <mat-card-content>
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav class="example-sidenav" mode="push">
+        Sidenav content goes here!
+      </mat-sidenav>
+
+      <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="sidenav.open()">
+
+        </button>
+      </div>
+    </mat-sidenav-container>
+  </mat-card-content>
